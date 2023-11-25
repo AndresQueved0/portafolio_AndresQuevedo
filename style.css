@@ -3,57 +3,58 @@
 
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0; /*establece el área de margen en los cuatro lados de un elemento.margin*/
+    padding: 0; /*establece el área de relleno en los cuatro lados de un elemento a la vez*/
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif; /*especifica una lista priorizada de uno o más nombres de familias de fuentes y/o nombres de familias genéricos para el elemento seleccionado.
+
+*/
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /*stablece el comportamiento de un cuadro de desplazamiento cuando el desplazamiento lo activa la navegación o las API de desplazamiento CSSOM.*/
 }
 
 p {
-    color: rgb(85, 85, 85);
+    color: rgb(85, 85, 85); /*Establece un color*/
 }
 /*Transition*/
 a,
 .btn {
-    transition: all 300ms ease;
+    transition: all 300ms ease; /*proporcionan una forma de controlar la velocidad de la animación al cambiar las propiedades de CSS.*/
 }
 
 /*Desktop nav*/
 
 nav,
 .nav-links {
-    display: flex;
-    list-style: none;
+    display: flex; /*establece si un elemento se trata como un bloque o un cuadro en línea y el diseño utilizado para sus elementos secundarios, como diseño de flujo , cuadrícula o flexión .*/
 }
 
 nav {
-    justify-content: space-around;
-    align-items: center;
-    height: 17vh;
+    justify-content: space-around; /*define cómo el navegador distribuye el espacio entre y alrededor de los elementos de contenido a lo largo del eje principal de un contenedor flexible y el eje en línea de un contenedor de cuadrícula.*/
+    align-items: center; /*establece el align-selfvalor de todos los hijos directos como grupo. En Flexbox, controla la alineación de elementos en el eje transversal . En Diseño de cuadrícula, controla la alineación de los elementos en el eje del bloque dentro de su área de cuadrícula .*/
+    height: 17vh; /*especifica la altura de un elemento. De forma predeterminada, la propiedad define la altura del área de contenido . Sin embargo, si box-sizingse establece en border-box, determina la altura del área del borde .*/
 }
 
-.nav.links {
-    gap: 2rem;
-    list-style: none;
-    font-size: 1.5rem;
+.nav-links {
+    gap: 2rem; /*establece los espacios ( canalones ) entre filas y columnas.*/
+    list-style: none; /*establece el marcador (como un disco, carácter o estilo de contador personalizado) de un elemento de lista*/
+    font-size: 1.5rem;/*establece el tamaño de la fuente. Cambiar el tamaño de fuente también actualiza los tamaños de las unidades relativas al tamaño de fuente, como , , etc*/
 }
 
 a {
     color: black;
-    text-decoration: none;
-    text-decoration-color: white;
+    text-decoration: none; /*establece la apariencia de las líneas decorativas en el texto. */
+    text-decoration-color: white; /*establece el color de las decoraciones agregadas al texto*/
 }
 
 a:hover {
     color: grey;
     text-decoration: underline;
-    text-underline-offset: 1rem;
+    text-underline-offset: 1rem; /*establece la distancia de desplazamiento de una línea decorativa de texto subrayado (aplicada mediante ) desde su posición original.*/
     text-decoration-color: rgb(181, 181, 181);
 }
 
@@ -62,7 +63,7 @@ a:hover {
 }
 
 .logo:hover {
-    cursor: default;
+    cursor: default; /*establece el cursor del mouse, si lo hay, para mostrar cuando el puntero del mouse está sobre un elemento*/
 }
 
 /*HAMBURGER MENU*/
@@ -72,13 +73,13 @@ a:hover {
 }
 
 .hamburger-menu {
-    position: relative;
+    position: relative; /*establece cómo se coloca un elemento en un documento. */
     display: inline-block;
 }
 
 .hamburger-icon {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*establece cómo se colocan los elementos flexibles en el contenedor flexible definiendo el eje principal y la dirección (normal o invertida).*/
     justify-content: space-between;
     height: 24px;
     width: 30px;
@@ -86,20 +87,31 @@ a:hover {
 }
 
 .hamburger-icon span {
-    width: 100%;
+    width: 100%; /*establece el ancho de un elemento. */
     height: 2px;
-    background-color: black;
+    background-color: black; /*establece el color de fondo de un elemento.*/
     transition: all 0.3 ease-in-out;
 }
 
 .menu-links {
     position: absolute;
-    top: 100%;
-    right: 0;
+    top: 100%; /*participa en la especificación de la posición vertical de un elemento posicionado .*/
+    right: 0; /*participa en la especificación de la posición horizontal de un elemento posicionado .*/
     background-color: white;
     width: fit-content;
-    max-height: 0;
-    overflow: all 0.3 ease-in-out;
+    max-height: 0; /*establece la altura máxima de un elemento.*/
+    overflow: hidden; /*establece el comportamiento deseado cuando el contenido no cabe en el cuadro del elemento principal (se desborda) en dirección horizontal y/o vertical.*/
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center; /*establece la alineación horizontal del contenido de nivel en línea dentro de un elemento de bloque o cuadro de celda de tabla. */
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
 }
 
 .menu-links li {
@@ -111,7 +123,15 @@ a:hover {
 }
 
 .hamburger-icon.open span:first-child {
-    transform: rotate(-45deg) translate(10px, -5px);
+    transform: rotate(45deg) translate(10px, 5px); /*le permite rotar, escalar, sesgar o traducir un elemento. Modifica el espacio de coordenadas del modelo de formato visual CSS */
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0; /*establece la opacidad de un elemento.*/
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px,-5px);
 }
 
 .hamburger-icon.open span:first-child {
@@ -129,13 +149,114 @@ a:hover {
 /*SECTIONS*/
 
 section {
-    padding-top: 4vh;
+    padding-top: 4vh; /*establece la altura del área de relleno en la parte superior de un elemento.*/
     height: 96vh;
     margin: 0 10rem;
-    box-sizing: border-box;
-    min-height: fit-content;
+    box-sizing: border-box; /*stablece cómo se calcula el ancho y alto total de un elemento.*/
+    min-height: fit-content; /*establece la altura mínima de un elemento. */
 }
 
 .section-container {
     display: flex;
+}
+
+/*Profile section*/
+
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 88vh;
+}
+
+.section_pic-container{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.section_text{
+    align-self: center; /*anula el valor de un elemento de cuadrícula o flexible*/
+    text-align: center;
+}
+
+.section_text p{
+    font-weight: 600; /*establece el peso (o negrita) de la fuente.*/
+}
+
+.section_text_p1{
+    text-align: center;
+}
+
+.section_text_p2{
+    font-size: 1.75rem;
+    margin-bottom: 1rem; /*establece el área del margen en la parte inferior de un elemento.*/
+}
+
+.tittle{
+    font-size: 3rem;
+    text-align: center;
+}
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem; /*establece el área del margen en la parte superior de un elemento.*/
+    gap: 1rem;
+}
+
+/*ICONS*/
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+/*BUTTONS*/
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn{
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2{
+    border: rgb(53, 53, 53) 0.1rem solid; /*establece el borde de un elemento.*/
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover{
+    cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+    background: rgb(53, 53, 53); /*establece todas las propiedades de estilo de fondo a la vez, como color, imagen, origen y tamaño, o método de repetición. */
+    color: white;
+}
+
+.btn-color-1:hover{
+    background: rgb(0, 0, 0);
+}
+
+.btn-color-2{
+    background: none;
+}
+
+.btn-color-2:hover{
+    border: rgb(225, 225, 225) 0.1rem solid;
+}
+
+.btn-container{
+    gap: 1rem;
 }
