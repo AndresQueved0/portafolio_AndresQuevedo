@@ -14,7 +14,7 @@ body {
 }
 
 html {
-    scroll-behavior: smooth; /*stablece el comportamiento de un cuadro de desplazamiento cuando el desplazamiento lo activa la navegación o las API de desplazamiento CSSOM.*/
+    scroll-behavior: smooth; /*establece el comportamiento de un cuadro de desplazamiento cuando el desplazamiento lo activa la navegación o las API de desplazamiento CSSOM.*/
 }
 
 p {
@@ -74,13 +74,13 @@ a:hover {
 
 .hamburger-menu {
     position: relative; /*establece cómo se coloca un elemento en un documento. */
-    display: inline-block;
+    display: inline-block; /*El elemento genera uno o más cuadros en línea que no generan saltos de línea antes o después de ellos mismos*/
 }
 
 .hamburger-icon {
     display: flex;
     flex-direction: column; /*establece cómo se colocan los elementos flexibles en el contenedor flexible definiendo el eje principal y la dirección (normal o invertida).*/
-    justify-content: space-between;
+    justify-content: space-between; /*Los elementos se distribuyen uniformemente dentro del contenedor de alineación a lo largo del eje principal*/
     height: 24px;
     width: 30px;
     cursor: pointer;
@@ -330,21 +330,21 @@ section {
 .experience-details-container {
     display: flex;
     justify-content: center;
-    flex-direction: colum;
+    flex-direction: colum; /*El eje principal del contenedor flexible es el mismo que el eje del bloque.*/
 }
 
 .article-container{
     display: flex;
     text-align: initial;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-wrap: wrap; /*Los elementos flex son colocados en varias líneas.*/
+    flex-direction: row;/*El eje principal del contenedor flexible se define como el mismo que la dirección del texto.*/
     gap: 2.5rem;
-    justify-content: space-around;
+    justify-content: space-around; /*Distribuya los artículos de manera uniforme. Los espacios iniciales y finales son la mitad del tamaño del espacio entre cada artículo.*/
 }
 
 article {
     display: flex;
-    width: 10rem;
+    width: 10rem; /*Tamaño de la letra del elemento raíz.*/
     justify-content: space-around;
     gap: 0.5rem;
 }
@@ -408,7 +408,7 @@ article .icon {
 }
 
 .contact-info-container p {
-    font-size: larger;
+    font-size: larger;/*La fuente será más grande o más pequeña en relación con el tamaño de fuente del elemento principal*/
 }
 
 .contact-icon {
@@ -422,7 +422,7 @@ article .icon {
 /*FOOTER SECTION*/
 
 footer {
-    height: 26vh;
+    height: 26vh;/*1% de la altura de la ventana gráfica.*/
     margin: 0.1rem;
 }
 
